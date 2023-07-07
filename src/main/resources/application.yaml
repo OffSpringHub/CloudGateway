@@ -1,0 +1,15 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: GATEWAY-SERVER
+  config:
+    import: optional:configserver:http://localhost:9296/
+  cloud:
+    gateway:
+      routes:
+        - id: EMPLOYEE-SERVICE
+          uri: lb://EMPLOYEE-SERVICE
+          predicates:
+            - Path=/api/v1/addresse/**
+
