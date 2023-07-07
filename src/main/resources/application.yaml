@@ -11,5 +11,5 @@ spring:
         - id: EMPLOYEE-SERVICE
           uri: lb://EMPLOYEE-SERVICE
           predicates:
-            - Path=/api/v1/addresse/**
+            - Path=/api/v1/companyservice/addresse/** ,/api/v1/companyservice/competence/**
 
